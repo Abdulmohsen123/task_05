@@ -9,13 +9,22 @@
 <body>
     {% for restaurant in restaurants %}
     <a href="#"></a>
+
+    
+    <a href="{% url 'restaurant-detail' restaurant.id %}">
+        <h1>{{restaurant.name}}</h1>
+    </a>
+
+
+    {% comment %}
     <ul>
         <li>
             <a href="{% url 'restaurant-detail' restaurant.id %}">
                 <h1>{{restaurant.name}}</h1>
             </a>
         </li>
-    </ul>
+
+    </ul> {% endcomment %}
     <br> {% endfor %}
 </body>
 
